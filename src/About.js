@@ -9,6 +9,7 @@ const AboutContainer = styled.div`
     font-weight: 300;
     @media (max-width: 1180px) {
         width: 80%;
+        margin: 190px auto;
       }
 `;
 
