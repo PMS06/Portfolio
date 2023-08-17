@@ -14,7 +14,7 @@ const EmailBarContainer = styled.div`
     content: '';
     height: 150px; 
     width: 1px;
-    background-color: ${(props) => (props.isdarktheme ? "#ffffff" : "#333333")};
+    background-color:${(props) => props.theme.icons};
   }
 
   @media (max-width: 768px) {
@@ -37,7 +37,7 @@ const EmailText = styled.a`
   font-family: 'Roboto Mono', monospace; 
   font-size: 13px;
   text-decoration: none;
-  color: ${(props) => (props.isdarktheme ? "#ffffff" : "#333333")};
+  color: ${(props) => props.theme.icons};
   cursor: pointer;
   margin-bottom: 1.5rem;
 
@@ -48,7 +48,7 @@ const EmailText = styled.a`
 
 function EmailBar({ isdarktheme }) {
     return (
-      <EmailBarContainer isDarkTheme={isdarktheme}>
+      <EmailBarContainer isdarktheme={isdarktheme}>
         <EmailText href="mailto:phonemyintsan31@gmail.com" isDarkTheme={isdarktheme}>
           phonemyintsan31@gmail.com
         </EmailText>

@@ -29,14 +29,14 @@ const SocialBar = styled.div`
     content: '';
     height: 150px; 
     width: 1px;
-    background-color: ${(props) => (props.isdarktheme ? "#ffffff" : "#333333")};
+    background-color: ${(props) => props.theme.icons};
   }
 
   a {
     margin-bottom: 1.5rem;
     font-size: 1.3rem;
     transition: color 0.3s ease;
-    color: ${(props) => (props.isdarktheme ? "#ffffff" : "#333333")};
+    color: ${(props) => props.theme.icons};
   }
 
   a : hover {
@@ -51,11 +51,11 @@ const SocialBar = styled.div`
 
 const SocialMediaBar = ({ isdarktheme }) => {
   return (
-    <SocialBar isDarkTheme={isdarktheme}>
-      <a href="" target="_blank" rel="noreferrer"><FaGithub /></a>
-      <a href="" target="_blank" rel="noreferrer"><FaLinkedin /></a>
-      <a href="" target="_blank" rel="noreferrer"><FaInstagram /></a>
-      <a href="" target="_blank" rel="noreferrer"><FaTwitter /></a>
+    <SocialBar isdarktheme={isdarktheme}>
+      <a href="https://github.com/PMS06" target="_blank" rel="noreferrer"><FaGithub /></a>
+      <a href="https://www.linkedin.com/in/pms06/" target="_blank" rel="noreferrer"><FaLinkedin /></a>
+      <a href="https://www.instagram.com/?hl=en" target="_blank" rel="noreferrer"><FaInstagram /></a>
+      <a href="https://twitter.com/PhoneMyintSan14" target="_blank" rel="noreferrer"><FaTwitter /></a>
     </SocialBar>
   );
 }

@@ -34,10 +34,12 @@ const darkTheme = {
   fontColor: "#ffffff",
   nameColor: "#ffffff",
   descriptionColor: "#cccccc",
+  icons: "#ffffff",
 };
 const lightTheme = {
   body: "#fff",
   fontColor: "#333333",
+  icons: "#333333",
   nameColor: "#133955",
   descriptionColor: "#666",
 };
