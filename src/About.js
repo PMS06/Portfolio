@@ -72,7 +72,7 @@ const AboutImage = styled.img`
     }
 
     @media (max-width: 768px) { 
-        width: 100%; 
+        max-width: 100%;
         height: 200px; 
         margin-top: 30px;
     }
