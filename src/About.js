@@ -47,7 +47,6 @@ const AboutContent = styled.div`
 
 const AboutText = styled.div`
     flex: 2;
-    margin-right: 20px;
     max-width: 500px;
     text-align: justify;
     line-height: 2;
@@ -90,7 +89,6 @@ const SketchedCircle = styled.span`
   position: relative;
   padding: 0em 0.65em;
 
-  
   font-family: 'Patrick Hand', sans-serif;
     font-weight: bold;
 

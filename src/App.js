@@ -12,6 +12,7 @@ import GlobalStyle from "./globalStyle";
 import Introduction from "./Introduction";
 import ButtonComponent from "./components/ButtonComponent";
 import About from "./About";
+import Skills from "./Skills";
 
 const StyledApp = styled.div`
   position: relative;
@@ -69,6 +70,7 @@ const lightTheme = {
         <Introduction isdarktheme={isdarktheme}/>
         <ButtonComponent/>
         <About isdarktheme={isdarktheme}/>
+        <Skills isdarktheme={isdarktheme}/>
         <EmailBar isdarktheme={isdarktheme}/>
         <SocialMediaBar isdarktheme={isdarktheme} />
       </StyledApp>
