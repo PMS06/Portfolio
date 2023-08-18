@@ -64,6 +64,8 @@ const AboutImage = styled.img`
     border-radius: 10px;
 
     @media (max-width: 1180px) {
+        object-position: center;
+        object-fit: cover;
         max-width: 100%; 
         margin-top: 50px;
     }
