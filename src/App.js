@@ -16,6 +16,7 @@ import Skills from "./Skills";
 import Projects from "./Projects";
 import Form from "./Form";
 import Footer from "./components/Footer";
+import { Helmet } from "react-helmet";
 
 const StyledApp = styled.div`
   position: relative;
@@ -62,6 +63,12 @@ const lightTheme = {
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>P</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+        <meta name="description" content="Phone Myint San" />
+      </Helmet>
     <GlobalStyle/>
     <ThemeProvider theme={isdarktheme ? darkTheme : lightTheme}>
       <StyledApp>

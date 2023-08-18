@@ -193,7 +193,7 @@ const Projects = ({ isdarktheme }) => {
             </TechnologiesUsed>
           </ProjectCard>
         </ProjectGrid>
-        <GithubLink href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">More coming on Github →</GithubLink>
+        <GithubLink href="https://github.com/PMS06" target="_blank" rel="noopener noreferrer">More coming on Github →</GithubLink>
       </ProjectContainer>
 
     </>

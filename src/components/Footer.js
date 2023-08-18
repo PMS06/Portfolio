@@ -9,7 +9,7 @@ const FooterContainer = styled.footer`
   
   justify-content: center;
   align-items: center;
-  font-family: Roboto;
+  font-family: Patrick Hand;
 
   @media (max-width: 1180px) {
     flex-direction: column;
@@ -27,35 +27,36 @@ const SocialIcons = styled.div`
 
   @media (max-width: 1180px) {
     display: flex;  
-    gap: 10px;
-    color: ${(props) => props.theme.icons};
+    gap: 25px;
+    
   }
 `;
 
 const IconLink = styled.a`
-  
-  font-size: 1.5rem;
+color: ${(props) => props.theme.icons};
+  font-size: 1.3rem;
   transition: color 0.3s ease;
 `;
 
 const Footer = ({isdarktheme}) => {
   return (
     <FooterContainer isdarktheme={isdarktheme}>
-      <Text>Created by Phone Myint San</Text>
+      
       <SocialIcons>
-        <IconLink href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+        <IconLink href="https://github.com/PMS06" target="_blank" rel="noopener noreferrer">
           <FaGithub />
         </IconLink>
-        <IconLink href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+        <IconLink href="https://www.instagram.com/pm_san6/?hl=en" target="_blank" rel="noopener noreferrer">
           <FaInstagram />
         </IconLink>
-        <IconLink href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+        <IconLink href="https://twitter.com/PhoneMyintSan14" target="_blank" rel="noopener noreferrer">
           <FaTwitter />
         </IconLink>
-        <IconLink href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+        <IconLink href="https://www.linkedin.com/in/pms06/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
         </IconLink>
       </SocialIcons>
+      <Text>Created by Phone Myint San 💯</Text>
     </FooterContainer>
   );
 }

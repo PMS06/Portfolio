@@ -50,9 +50,9 @@ const Textarea = styled.textarea`
 const SubmitButton = styled.button`
 width: 20%;
   padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
+  background-color: #fff;
+  color: #007bff;
+  border: 1px solid #007bff;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
@@ -68,7 +68,7 @@ width: 20%;
 const Form = ({ isdarktheme }) => {
   return (
     <FormContainer isdarktheme={isdarktheme}>
-      <FormHeader>Let's Talk</FormHeader>
+      <FormHeader>Let's Talk 💬</FormHeader>
       <StyledForm action="https://formspree.io/YOUR_EMAIL_ADDRESS" method="POST">
         <Input type="text" name="name" placeholder="Name" required />
         <Input type="email" name="_replyto" placeholder="Email" required />

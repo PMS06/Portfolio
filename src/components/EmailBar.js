@@ -17,7 +17,7 @@ const EmailBarContainer = styled.div`
     background-color:${(props) => props.theme.icons};
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1180px) {
     transform: none;
     top: auto;
     right: 50%;
