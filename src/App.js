@@ -17,6 +17,7 @@ import Projects from "./Projects";
 import Form from "./Form";
 import Footer from "./components/Footer";
 import { Helmet } from "react-helmet";
+import ScrollToTop from "./components/ScrollToTop";
 
 const StyledApp = styled.div`
   position: relative;
@@ -87,6 +88,7 @@ const lightTheme = {
         <EmailBar isdarktheme={isdarktheme}/>
         <SocialMediaBar isdarktheme={isdarktheme} />
       </StyledApp>
+      <ScrollToTop/>
     </ThemeProvider>
  
     </>
