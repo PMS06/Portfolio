@@ -16,7 +16,6 @@ const AboutContainer = styled.div`
 const AboutHeader = styled.p`
     display: flex;
     align-items: center;
-    font-weight: bold;
     font-size: 1.8rem;
     color: ${(props) => props.theme.nameColor};
 

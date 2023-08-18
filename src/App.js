@@ -13,6 +13,9 @@ import Introduction from "./Introduction";
 import ButtonComponent from "./components/ButtonComponent";
 import About from "./About";
 import Skills from "./Skills";
+import Projects from "./Projects";
+import Form from "./Form";
+import Footer from "./components/Footer";
 
 const StyledApp = styled.div`
   position: relative;
@@ -41,7 +44,7 @@ const lightTheme = {
   body: "#fff",
   fontColor: "#333333",
   icons: "#333333",
-  nameColor: "#133955",
+  nameColor: "#007bff",
   descriptionColor: "#666",
 };
 
@@ -71,6 +74,9 @@ const lightTheme = {
         <ButtonComponent/>
         <About isdarktheme={isdarktheme}/>
         <Skills isdarktheme={isdarktheme}/>
+        <Projects isdarktheme={isdarktheme}/>
+        <Form/>
+        <Footer/>
         <EmailBar isdarktheme={isdarktheme}/>
         <SocialMediaBar isdarktheme={isdarktheme} />
       </StyledApp>

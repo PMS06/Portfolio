@@ -22,12 +22,24 @@ const SkillContainer = styled.div`
 const SkillHeader = styled.p`
   display: flex;
   align-items: center;
-  font-weight: bold;
+
   font-size: 1.8rem;
   color: ${(props) => props.theme.nameColor};
   
   @media (max-width: 1180px) {
     font-size: 1.3rem;
+  }
+`;
+
+const SkillHeader2 = styled.p`
+  display: flex;
+  align-items: center;
+ 
+  font-size: 1.5rem;
+  color: ${(props) => props.theme.nameColor};
+  
+  @media (max-width: 1180px) {
+    font-size: 1rem;
   }
 `;
 
@@ -41,6 +53,7 @@ const HorizontalLine = styled.hr`
 const IconList = styled.div`
   display: flex;
   justify-content: center; 
+  align-items: center; 
   padding-left: 15px;
   gap: 90px;  
   margin: 80px;
@@ -63,69 +76,40 @@ const StyledIcon = styled(FontAwesomeIcon)`
     font-size: 3em;  
   }
   @media (max-width: 768px) {
-    font-size: 1.5em;  
+    font-size: 2em;  
   }
 `;
 
 const IconImage = styled.img`
-  width: 50px; 
-  height: auto;
-  margin-left: -10px;
+  width: 70px; 
+  height: auto; 
+  margin-left: -15px;
   @media (max-width: 1180px) {
-    width: 40px;
+    width: 70px;
+    height: 40px; 
   }
   @media (max-width: 768px) {
-    width: 30px;
-    margin-top: -3px;
-    margin-left: -7px;
+    width: 40px;
+    height: 40px; 
+
   }
 `;
-
 
 const IconImage2 = styled.img`
-  width: 50px; 
-  height: auto;
-  margin-left: 10px;
+  width: 70px; 
+  height: 100px;
+  object-fit: contain; 
+  object-position: center;
+  margin-left: 8px;
   @media (max-width: 1180px) {
     width: 40px;
+    height: 40px; 
+    margin-left: 3px;
   }
   @media (max-width: 768px) {
-    width: 25px;
-    object-fit: contain;
-    margin-top: -10px;
-    margin-left: 10px;
-    
-  }
-`;
-
-const IconImage3 = styled.img`
-  width: 80px; 
-  height: auto;
-  margin-left: 10px;
-  object-fit: contain;
-  @media (max-width: 1180px) {
     width: 40px;
-    margin-top: -10px;
- 
-  }
-  @media (max-width: 768px) {
-    width: 35px;
-    margin-top: -5px;
-    margin-left: 5px;
-  }
-`;
-
-const IconImage4 = styled.img`
-  width: 50px; 
-  height: auto;
-  margin-left: 10px;
-  @media (max-width: 1180px) {
-    width: 40px;
-  }
-  @media (max-width: 768px) {
-    width: 35px;
-    margin-top: -3px;
-    margin-left: 5px;
+    height: 40px; 
+    margin-left: 0.2rem;
   }
 `;
 
@@ -148,13 +132,13 @@ const Skills = ({ isdarktheme }) => {
             <StyledIcon icon={faGitAlt} color="#f34f29" />
             <IconImage src={mongoIcon} alt="MongoDB" />
         </IconList>
-        <SkillHeader>Other Technologies I've Tried</SkillHeader>
+        <SkillHeader2>Other Technologies I've Tried</SkillHeader2>
         <IconList>
              <StyledIcon icon={faPython} color="#3776AB" />
+             <StyledIcon icon={faAws} color="#FF9900" />
              <IconImage2 src={c} alt="C#" />
-             <IconImage3 src={kali} alt="kali" />
-            <StyledIcon icon={faAws} color="#FF9900" />
-            <IconImage4 src={vb} alt="virtual box" />
+             <IconImage2 src={kali} alt="kali" />
+            <IconImage2 src={vb} alt="virtual box" />
         </IconList>
       </SkillContainer>
     </>

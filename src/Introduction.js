@@ -17,7 +17,7 @@ const IntroductionContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
-  margin-left: 10rem; 
+  margin-left: 15rem; 
   text-align: left;
   font-family: Roboto;
   font-weight: 300;
@@ -112,7 +112,7 @@ function Introduction({ isdarktheme }) {
             }}
         /> */}
         </Name>
-          <Slogan>Turning Dreams into Code.</Slogan>
+          <Slogan>I Turn Dreams into Code.</Slogan>
           <Description isdarktheme={isdarktheme}>
             Being a self taught programmer, I'm just scratching the surface of full-stack development. Every line of code deepens my passion and understanding. My focus is to create user-centered solutions and embracing every lesson along the way.
         </Description>
