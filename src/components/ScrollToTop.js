@@ -6,7 +6,7 @@ const ScrollButton = styled.button`
   bottom: 20px;
   right: 50px;
   font-size: 2rem;
-  border-radius: 50px;
+  border-radius: 100px;
   border: none;
   padding: 10px 15px;
   cursor: pointer;
