@@ -62,14 +62,20 @@ const AboutImage = styled.img`
     flex: 1;
     max-width: 50%;
     border-radius: 10px;
+    transition: all 0.3s ease; 
 
     @media (max-width: 1180px) {
-        object-position: center;
-        object-fit: cover;
-        max-width: 100%; 
-        margin-top: 50px;
+        width: 90%; 
+        object-fit: cover;  
+        margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {  
+        width: 100%; 
+        margin-top: 20px;
     }
 `;
+
 
 const About = ({ isdarktheme }) => {
   return (
