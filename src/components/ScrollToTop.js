@@ -6,12 +6,13 @@ const ScrollButton = styled.button`
   bottom: 20px;
   right: 50px;
   font-size: 2rem;
-  border-radius: 100px;
+  width: 50px; // setting width and height directly
+  height: 50px;
+  border-radius: 50%; // makes it a circle
   border: none;
-  padding: 10px 15px;
   cursor: pointer;
-  display: none; /* Hidden by default */
-  z-index: 1001; /* Stay on top of other elements */
+  display: none; 
+  z-index: 1001; 
   &:hover {
     opacity: 1;
   }

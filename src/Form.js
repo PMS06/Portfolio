@@ -69,7 +69,7 @@ const Form = ({ isdarktheme }) => {
   return (
     <FormContainer isdarktheme={isdarktheme}>
       <FormHeader>Let's Talk 💬</FormHeader>
-      <StyledForm action="https://formspree.io/YOUR_EMAIL_ADDRESS" method="POST">
+      <StyledForm  action="https://formspree.io/f/xknlrnlo" method="POST">
         <Input type="text" name="name" placeholder="Name" required />
         <Input type="email" name="_replyto" placeholder="Email" required />
         <Textarea name="message" rows="5" placeholder="Message" required></Textarea>
