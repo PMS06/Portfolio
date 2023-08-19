@@ -6,9 +6,9 @@ const ScrollButton = styled.button`
   bottom: 20px;
   right: 50px;
   font-size: 2rem;
-  width: 50px; // setting width and height directly
+  width: 50px; 
   height: 50px;
-  border-radius: 50%; // makes it a circle
+  border-radius: 50%; 
   border: none;
   cursor: pointer;
   display: none; 
