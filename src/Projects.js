@@ -60,6 +60,7 @@ const ProjectCard = styled.div`
 const ProjectName = styled.h3`
   font-size: 1.5rem;
   margin-top: 10px;
+  font-family: 'Roboto';
   line-height: 1.5;
   color: ${(props) => props.theme.fontColor};
 
