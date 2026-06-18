@@ -1,59 +1,56 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
+import { motion } from "motion/react";
 
-
-const EmailBarContainer = styled.div`
+const Container = styled(motion.div)`
   position: fixed;
-  right: 2rem;
-  bottom: 0rem;
+  right: 2.5rem;
+  bottom: 0;
+  z-index: 50;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   &::after {
-    content: '';
-    height: 150px; 
+    content: "";
+    margin-top: 0.5rem;
+    height: 120px;
     width: 1px;
-    background-color:${(props) => props.theme.icons};
+    background-color: ${(p) => p.theme.fgMuted};
   }
 
-  @media (max-width: 1180px) {
-    transform: none;
-    top: auto;
-    right: 50%;
-    flex-direction: row;
-    transform: translateX(50%);  
-
-    &::after {
-        display: none;
-      }
+  @media (max-width: 1024px) {
+    display: none;
   }
-
-  
 `;
 
 const EmailText = styled.a`
-  writing-mode: vertical-rl;  
-  font-family: 'Roboto Mono', monospace; 
-  font-size: 13px;
-  text-decoration: none;
-  color: ${(props) => props.theme.icons};
-  cursor: pointer;
+  writing-mode: vertical-rl;
+  font-family: "Geist Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: ${(p) => p.theme.fgMuted};
   margin-bottom: 1.5rem;
+  transition: color 0.25s ease, transform 0.25s ease;
 
-  @media (max-width: 1024px) {
-   display: none;
+  &:hover {
+    color: ${(p) => p.theme.accent};
+    transform: translateY(-4px);
   }
 `;
 
-function EmailBar({ isdarktheme }) {
-    return (
-      <EmailBarContainer isdarktheme={isdarktheme}>
-        <EmailText href="mailto:phonemyintsan31@gmail.com" isDarkTheme={isdarktheme}>
-          phonemyintsan31@gmail.com
-        </EmailText>
-      </EmailBarContainer>
-    );
-  }
-  
+const EmailBar = () => {
+  return (
+    <Container
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 1.5, duration: 0.6, ease: "easeOut" }}
+    >
+      <EmailText href="mailto:phonemyintsan31@gmail.com">
+        phonemyintsan31@gmail.com
+      </EmailText>
+    </Container>
+  );
+};
+
 export default EmailBar;

@@ -1,62 +1,60 @@
-import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import { AnimatePresence, motion } from "motion/react";
+import { LuArrowUp } from "react-icons/lu";
 
-const ScrollButton = styled.button`
+const Btn = styled(motion.button)`
   position: fixed;
-  bottom: 20px;
-  right: 50px;
-  font-size: 2rem;
-  width: 50px; 
-  height: 50px;
-  border-radius: 50%; 
-  border: none;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  z-index: 80;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  border: 1px solid ${(p) => p.theme.border};
+  background: ${(p) => p.theme.surface};
+  color: ${(p) => p.theme.fg};
+  display: grid;
+  place-items: center;
   cursor: pointer;
-  display: none; 
-  z-index: 1001; 
+  backdrop-filter: blur(8px);
+
   &:hover {
-    opacity: 1;
-  }
-  @media (max-width: 1180px) {
-    right: 30px;
+    border-color: ${(p) => p.theme.accent};
+    color: ${(p) => p.theme.accent};
   }
 `;
 
 const ScrollToTop = () => {
-  const [visible, setVisible] = useState(window.pageYOffset > 400);
-
-  const checkScroll = () => {
-    setVisible(prevVisible => {
-      // If the button is not visible and the scroll position is greater than 400
-      if (!prevVisible && window.pageYOffset > 400) {
-        return true;
-      } 
-      // If the button is visible and the scroll position is less than or equal to 400
-      else if (prevVisible && window.pageYOffset <= 400) {
-        return false;
-      }
-      return prevVisible; // return the previous state if neither of the above conditions are met
-    });
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  };
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    checkScroll();
-    window.addEventListener('scroll', checkScroll);
-    return () => window.removeEventListener('scroll', checkScroll);
+    const onScroll = () => setVisible(window.scrollY > 600);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const goTop = () =>
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
-    <ScrollButton onClick={scrollToTop} style={{ display: visible ? 'block' : 'none' }}>
-      👆🏻
-    </ScrollButton>
+    <AnimatePresence>
+      {visible && (
+        <Btn
+          onClick={goTop}
+          aria-label="Scroll to top"
+          initial={{ opacity: 0, scale: 0.6, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.6, y: 20 }}
+          whileHover={{ y: -3 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+        >
+          <LuArrowUp size={18} />
+        </Btn>
+      )}
+    </AnimatePresence>
   );
 };
 
 export default ScrollToTop;
-
