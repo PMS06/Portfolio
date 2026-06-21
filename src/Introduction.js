@@ -309,7 +309,7 @@ const Introduction = () => {
         <MetaBlock>
           <span className="key">⎯ shipped</span>
           <span className="val">
-            8+ production apps <em>·</em> 10k+ downloads
+            15+ production apps <em>·</em> 10k+ downloads
           </span>
         </MetaBlock>
       </SideMeta>
