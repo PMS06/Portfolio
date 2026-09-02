@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { LuSun, LuMoon } from "react-icons/lu";
 
 const Bar = styled.header`
@@ -117,31 +117,6 @@ const ToggleBtn = styled.button`
   }
 `;
 
-const ResumeBtn = styled.a`
-  font-family: "Geist Mono", monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.55rem 0.9rem;
-  border: 1px solid ${(p) => p.theme.accent};
-  color: ${(p) => p.theme.accent};
-  cursor: pointer;
-  transition: all 0.2s ease;
-
-  &:hover {
-    background: ${(p) => p.theme.accent};
-    color: ${(p) => p.theme.bg};
-  }
-
-  ${(p) =>
-    p.$compact &&
-    css`
-      @media (max-width: 820px) {
-        display: none;
-      }
-    `}
-`;
-
 const items = [
   { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
@@ -172,9 +147,6 @@ const Navbar = ({ toggleTheme, isdarktheme }) => {
         ))}
       </Links>
       <Right>
-        <ResumeBtn href="/Resume.pdf" target="_blank" rel="noreferrer" $compact>
-          Résumé ↗
-        </ResumeBtn>
         <ToggleBtn onClick={toggleTheme} aria-label="Toggle theme">
           {isdarktheme ? <LuSun size={16} /> : <LuMoon size={16} />}
         </ToggleBtn>

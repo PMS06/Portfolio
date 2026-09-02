@@ -1,11 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-  FaXTwitter,
-} from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 const FooterContainer = styled.footer`
   width: 100%;
@@ -91,14 +86,6 @@ const Footer = () => {
           aria-label="LinkedIn"
         >
           <FaLinkedin />
-        </a>
-        <a
-          href="https://www.instagram.com/pm_san6/?hl=en"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-        >
-          <FaInstagram />
         </a>
         <a
           href="https://twitter.com/PhoneMyintSan14"
