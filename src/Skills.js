@@ -53,14 +53,14 @@ const Header = styled.div`
 `;
 
 const Numeral = styled.span`
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.85rem;
   color: ${(p) => p.theme.accent};
   letter-spacing: 0.1em;
 `;
 
 const Title = styled.h2`
-  font-family: "Instrument Serif", serif;
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(2rem, 4.5vw, 3.4rem);
   letter-spacing: -0.01em;
@@ -107,7 +107,7 @@ const Cat = styled.div`
 `;
 
 const CatLabel = styled.div`
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.75rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -137,7 +137,7 @@ const Chip = styled.div`
   gap: 0.55rem;
   padding: 0.55rem 0.85rem;
   border: 1px solid ${(p) => p.theme.border};
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.78rem;
   color: ${(p) => p.theme.fg};
   background: ${(p) => p.theme.surface};

@@ -20,14 +20,14 @@ const Header = styled.div`
 `;
 
 const Numeral = styled.span`
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.85rem;
   color: ${(p) => p.theme.accent};
   letter-spacing: 0.1em;
 `;
 
 const Title = styled.h2`
-  font-family: "Instrument Serif", serif;
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(2rem, 4.5vw, 3.4rem);
   letter-spacing: -0.01em;
@@ -73,7 +73,7 @@ const Prose = styled.div`
   }
 
   em {
-    font-family: "Instrument Serif", serif;
+    font-family: var(--font-display);
     font-style: italic;
     color: ${(p) => p.theme.accent};
     font-size: 1.2em;
@@ -90,7 +90,7 @@ const Manifest = styled.div`
   position: relative;
   border: 1px solid ${(p) => p.theme.border};
   background: ${(p) => p.theme.surface};
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.82rem;
   color: ${(p) => p.theme.fgMuted};
 
@@ -163,7 +163,7 @@ const Row = styled.div`
   }
 
   .val em {
-    font-family: "Instrument Serif", serif;
+    font-family: var(--font-display);
     font-style: italic;
     color: ${(p) => p.theme.accent};
     font-size: 1.05rem;
@@ -200,7 +200,7 @@ const Stat = styled.div`
   border-bottom: 1px solid ${(p) => p.theme.border};
 
   .num {
-    font-family: "Instrument Serif", serif;
+    font-family: var(--font-display);
     font-size: 2.4rem;
     line-height: 1;
     color: ${(p) => p.theme.fg};
@@ -213,7 +213,7 @@ const Stat = styled.div`
 
   .label {
     margin-top: 0.5rem;
-    font-family: "Geist Mono", monospace;
+    font-family: var(--font-mono);
     font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -243,8 +243,9 @@ const About = () => {
             , and <strong>Laravel</strong>.
           </p>
           <p>
-            At <strong>Scorchsoft</strong> I've delivered production apps
-            across mobile and web — a dual-camera live-streaming social
+            I'm currently a <strong>software engineer at Gnomic</strong>.
+            Before that, at <strong>Scorchsoft</strong>, I delivered production
+            apps across mobile and web — a dual-camera live-streaming social
             platform, a healthcare assessment tool for UK care homes, and a
             high-traffic teacher assessment platform whose response time I cut
             by <em>~60%</em> through Laravel queues, Redis caching, and

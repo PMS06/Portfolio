@@ -26,7 +26,7 @@ const Container = styled(motion.div)`
 
 const EmailText = styled.a`
   writing-mode: vertical-rl;
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.78rem;
   letter-spacing: 0.1em;
   color: ${(p) => p.theme.fgMuted};

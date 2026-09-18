@@ -22,14 +22,14 @@ const Header = styled.div`
 `;
 
 const Numeral = styled.span`
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.85rem;
   color: ${(p) => p.theme.accent};
   letter-spacing: 0.1em;
 `;
 
 const Title = styled.h2`
-  font-family: "Instrument Serif", serif;
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(2rem, 4.5vw, 3.4rem);
   letter-spacing: -0.01em;
@@ -67,7 +67,7 @@ const Intro = styled.div`
 `;
 
 const Pitch = styled.p`
-  font-family: "Instrument Serif", serif;
+  font-family: var(--font-display);
   font-size: clamp(1.6rem, 2.8vw, 2.1rem);
   line-height: 1.25;
   color: ${(p) => p.theme.fg};
@@ -82,7 +82,7 @@ const Channels = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.86rem;
 `;
 
@@ -120,7 +120,7 @@ const Field = styled.label`
   gap: 0.5rem;
 
   .label {
-    font-family: "Geist Mono", monospace;
+    font-family: var(--font-mono);
     font-size: 0.72rem;
     text-transform: uppercase;
     letter-spacing: 0.16em;
@@ -142,7 +142,7 @@ const inputStyles = `
   border-bottom: 1px solid;
   border-radius: 0;
   padding: 0.65rem 0;
-  font-family: 'Geist', sans-serif;
+  font-family: var(--font-sans);
   font-size: 1rem;
   outline: none;
   transition: border-color 0.25s ease;
@@ -168,7 +168,7 @@ const Textarea = styled.textarea`
   border-bottom-color: ${(p) => p.theme.border};
   resize: vertical;
   min-height: 110px;
-  font-family: "Geist", sans-serif;
+  font-family: var(--font-sans);
 
   &::placeholder {
     color: ${(p) => p.theme.fgSubtle};
@@ -188,7 +188,7 @@ const Submit = styled(motion.button)`
   background: ${(p) => p.theme.accent};
   color: ${(p) => p.theme.bg};
   border: none;
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.82rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;

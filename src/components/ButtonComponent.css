@@ -16,7 +16,7 @@
     border : solid 3px #000 ;
     border-radius : 40px ;
     background : var(--main_color) ;
-    font-family: 'Roboto Mono', monospace;
+    font-family: var(--font-mono);
     
     @media (max-width: 1180px) {
         width : 180px ;

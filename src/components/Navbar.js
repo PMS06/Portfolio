@@ -12,7 +12,7 @@ const Bar = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2.5rem;
-  font-family: "Geist Mono", "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.78rem;
   letter-spacing: 0.02em;
   backdrop-filter: blur(14px) saturate(140%);
@@ -29,25 +29,6 @@ const Bar = styled.header`
 
   @media (max-width: 768px) {
     padding: 0.9rem 1.25rem;
-  }
-`;
-
-const Mark = styled.a`
-  font-family: "Instrument Serif", serif;
-  font-style: italic;
-  font-size: 1.6rem;
-  color: ${(p) => p.theme.fg};
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-
-  &::before {
-    content: "";
-    width: 8px;
-    height: 8px;
-    background: ${(p) => p.theme.accent};
-    border-radius: 50%;
-    box-shadow: 0 0 14px ${(p) => p.theme.accent};
   }
 `;
 
@@ -137,7 +118,6 @@ const Navbar = ({ toggleTheme, isdarktheme }) => {
 
   return (
     <Bar $scrolled={scrolled}>
-      <Mark href="#top">pms.</Mark>
       <Links>
         {items.map((it, i) => (
           <NavLink key={it.id} href={`#${it.id}`}>

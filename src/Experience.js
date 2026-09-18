@@ -21,14 +21,14 @@ const Header = styled.div`
 `;
 
 const Numeral = styled.span`
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.85rem;
   color: ${(p) => p.theme.accent};
   letter-spacing: 0.1em;
 `;
 
 const Title = styled.h2`
-  font-family: "Instrument Serif", serif;
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(2rem, 4.5vw, 3.4rem);
   letter-spacing: -0.01em;
@@ -93,7 +93,7 @@ const Role = styled.article`
 `;
 
 const Dates = styled.div`
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.8rem;
   color: ${(p) => p.theme.fgMuted};
   display: flex;
@@ -118,7 +118,7 @@ const Dates = styled.div`
 const Body = styled.div``;
 
 const RoleTitle = styled.h3`
-  font-family: "Instrument Serif", serif;
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(1.5rem, 3vw, 2.1rem);
   color: ${(p) => p.theme.fg};
@@ -134,12 +134,12 @@ const RoleTitle = styled.h3`
 
   .sep {
     color: ${(p) => p.theme.fgSubtle};
-    font-family: "Geist Mono", monospace;
+    font-family: var(--font-mono);
     font-size: 0.85rem;
   }
 
   .arrow {
-    font-family: "Geist Mono", monospace;
+    font-family: var(--font-mono);
     color: ${(p) => p.theme.fgSubtle};
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -185,7 +185,7 @@ const Tags = styled.div`
 `;
 
 const Tag = styled.span`
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -196,10 +196,35 @@ const Tag = styled.span`
 
 const roles = [
   {
+    company: "Gnomic",
+    title: "Software Engineer",
+    dates: "Sep 2026 — Present",
+    isNow: true,
+    location: "Remote",
+    bullets: [
+      <>
+        Building full-stack and mobile products end-to-end in{" "}
+        <strong>React Native</strong>, <strong>TypeScript</strong>,{" "}
+        <strong>React</strong>, <strong>TanStack Start</strong>,{" "}
+        <strong>NestJS</strong>, <strong>Payload CMS</strong>, and{" "}
+        <strong>Laravel</strong> — with infrastructure managed as code.
+      </>,
+    ],
+    tags: [
+      "React Native",
+      "TypeScript",
+      "React",
+      "TanStack Start",
+      "NestJS",
+      "Payload",
+      "Laravel",
+      "IaC",
+    ],
+  },
+  {
     company: "Scorchsoft",
     title: "Developer",
-    dates: "Dec 2023 — Present",
-    isNow: true,
+    dates: "Dec 2023 — Sep 2026",
     location: "Birmingham, UK",
     bullets: [
       <>

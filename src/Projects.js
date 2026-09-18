@@ -22,14 +22,14 @@ const Header = styled.div`
 `;
 
 const Numeral = styled.span`
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.85rem;
   color: ${(p) => p.theme.accent};
   letter-spacing: 0.1em;
 `;
 
 const Title = styled.h2`
-  font-family: "Instrument Serif", serif;
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(2rem, 4.5vw, 3.4rem);
   letter-spacing: -0.01em;
@@ -48,7 +48,7 @@ const Rule = styled.span`
 `;
 
 const Caption = styled.p`
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.8rem;
   color: ${(p) => p.theme.fgMuted};
   margin-bottom: 3rem;
@@ -122,7 +122,7 @@ const Card = styled(motion.a)`
 `;
 
 const RoleTag = styled.div`
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.16em;
@@ -144,7 +144,7 @@ const RoleTag = styled.div`
   }
 
   .num {
-    font-family: "Instrument Serif", serif;
+    font-family: var(--font-display);
     font-style: italic;
     font-size: 1.6rem;
     color: ${(p) => p.theme.fgSubtle};
@@ -159,7 +159,7 @@ const Middle = styled.div`
 `;
 
 const Name = styled.h3`
-  font-family: "Instrument Serif", serif;
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(1.65rem, 3.2vw, 2.4rem);
   line-height: 1.05;
@@ -187,7 +187,7 @@ const Tags = styled.div`
   margin-top: 0.3rem;
 
   span {
-    font-family: "Geist Mono", monospace;
+    font-family: var(--font-mono);
     font-size: 0.68rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -216,7 +216,7 @@ const FooterRow = styled.div`
   justify-content: space-between;
   align-items: center;
   padding-top: 2rem;
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.8rem;
   color: ${(p) => p.theme.fgMuted};
 

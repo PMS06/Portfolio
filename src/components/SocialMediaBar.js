@@ -1,12 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "motion/react";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-  FaXTwitter,
-} from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 const SocialBar = styled(motion.div)`
   position: fixed;
@@ -47,11 +42,6 @@ const links = [
     Icon: FaLinkedin,
     href: "https://www.linkedin.com/in/pms06/",
     label: "LinkedIn",
-  },
-  {
-    Icon: FaInstagram,
-    href: "https://www.instagram.com/pm_san6/?hl=en",
-    label: "Instagram",
   },
   {
     Icon: FaXTwitter,

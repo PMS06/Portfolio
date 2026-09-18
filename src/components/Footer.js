@@ -9,7 +9,7 @@ const FooterContainer = styled.footer`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.78rem;
   color: ${(p) => p.theme.fgMuted};
   gap: 1.5rem;
@@ -26,7 +26,7 @@ const Brand = styled.span`
   gap: 0.5rem;
 
   em {
-    font-family: "Instrument Serif", serif;
+    font-family: var(--font-display);
     font-style: italic;
     color: ${(p) => p.theme.fg};
     font-size: 1rem;
@@ -38,7 +38,7 @@ const Built = styled.span`
   text-align: center;
 
   em {
-    font-family: "Instrument Serif", serif;
+    font-family: var(--font-display);
     font-style: italic;
     color: ${(p) => p.theme.accent};
     font-size: 1.05rem;

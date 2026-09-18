@@ -33,8 +33,8 @@ const darkTheme = {
   fg: "#f2efe9",
   fgMuted: "#a0a1a8",
   fgSubtle: "#6c6d73",
-  accent: "#ff5b3d",
-  accentSoft: "rgba(255, 91, 61, 0.10)",
+  accent: "#4ec9ad",
+  accentSoft: "rgba(78, 201, 173, 0.12)",
   shadow: "0 30px 60px -30px rgba(0,0,0,0.8)",
   grain: 0.045,
   grainBlend: "overlay",
@@ -49,8 +49,8 @@ const lightTheme = {
   fg: "#0e0e10",
   fgMuted: "#52525a",
   fgSubtle: "#8a8a92",
-  accent: "#d63d1f",
-  accentSoft: "rgba(214, 61, 31, 0.08)",
+  accent: "#0d6e5e",
+  accentSoft: "rgba(13, 110, 94, 0.08)",
   shadow: "0 30px 60px -30px rgba(20,20,20,0.18)",
   grain: 0.05,
   grainBlend: "multiply",
@@ -74,7 +74,7 @@ function App() {
           <title>Phone Myint San — Full-stack & Mobile Engineer</title>
           <meta
             name="description"
-            content="Phone Myint San — Full-stack & mobile engineer shipping React Native, TypeScript, and Laravel systems. Birmingham, UK."
+            content="Phone Myint San — Software engineer at Gnomic. Full-stack & mobile: React Native, TypeScript, Laravel. Bristol, UK."
           />
         </Helmet>
         <GlobalStyle />

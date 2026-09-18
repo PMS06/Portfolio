@@ -1,6 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+  :root {
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-sans: 'Instrument Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  }
+
   *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -18,9 +24,9 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     background-color: ${(p) => p.theme.bg};
     color: ${(p) => p.theme.fg};
-    font-family: 'Geist', system-ui, -apple-system, sans-serif;
+    font-family: var(--font-sans);
     font-weight: 400;
-    font-feature-settings: 'ss01', 'ss02', 'cv01', 'cv11';
+    font-optical-sizing: auto;
     transition: background-color 0.5s ease, color 0.5s ease;
   }
 

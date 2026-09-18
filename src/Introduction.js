@@ -25,7 +25,7 @@ const Section = styled.section`
 `;
 
 const Eyebrow = styled(motion.div)`
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.78rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -44,7 +44,7 @@ const Eyebrow = styled(motion.div)`
 `;
 
 const Title = styled(motion.h1)`
-  font-family: "Instrument Serif", serif;
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(3.4rem, 11vw, 9rem);
   line-height: 0.92;
@@ -81,7 +81,7 @@ const StatusRow = styled(motion.div)`
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem 2rem;
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.78rem;
   color: ${(p) => p.theme.fgMuted};
 
@@ -115,7 +115,7 @@ const Primary = styled(motion.a)`
   padding: 1rem 1.5rem;
   background: ${(p) => p.theme.accent};
   color: ${(p) => p.theme.bg};
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.82rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -167,7 +167,7 @@ const Secondary = styled(Primary)`
 `;
 
 const SideMeta = styled(motion.aside)`
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.78rem;
   color: ${(p) => p.theme.fgMuted};
   display: flex;
@@ -205,7 +205,7 @@ const MetaBlock = styled.div`
   }
 
   .val em {
-    font-family: "Instrument Serif", serif;
+    font-family: var(--font-display);
     font-style: italic;
     color: ${(p) => p.theme.accent};
   }
@@ -215,7 +215,7 @@ const ScrollHint = styled(motion.div)`
   position: absolute;
   bottom: 2rem;
   left: 7vw;
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.7rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -291,13 +291,13 @@ const Introduction = () => {
         <MetaBlock>
           <span className="key">⎯ currently</span>
           <span className="val">
-            Developer <em>@</em> Scorchsoft
+            Software Engineer <em>@</em> Gnomic
           </span>
         </MetaBlock>
         <MetaBlock>
           <span className="key">⎯ previously</span>
           <span className="val">
-            Head Engineer <em>@</em> SafeNet Education
+            Developer <em>@</em> Scorchsoft
           </span>
         </MetaBlock>
         <MetaBlock>
