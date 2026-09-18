@@ -187,7 +187,7 @@ const Submit = styled(motion.button)`
   padding: 0.95rem 1.4rem;
   background: ${(p) => p.theme.accent};
   color: ${(p) => p.theme.bg};
-  border: none;
+  border: 1px solid ${(p) => p.theme.fg};
   font-family: var(--font-mono);
   font-size: 0.82rem;
   letter-spacing: 0.1em;
@@ -209,7 +209,7 @@ const Submit = styled(motion.button)`
     content: "";
     position: absolute;
     inset: 0;
-    background: ${(p) => p.theme.fg};
+    background: ${(p) => p.theme.bg};
     transform: translateY(101%);
     transition: transform 0.4s cubic-bezier(0.7, 0, 0.2, 1);
   }
@@ -219,7 +219,7 @@ const Submit = styled(motion.button)`
   }
 
   &:hover span {
-    color: ${(p) => p.theme.bg};
+    color: ${(p) => p.theme.fg};
   }
 `;
 

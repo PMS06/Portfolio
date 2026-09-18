@@ -115,6 +115,7 @@ const Primary = styled(motion.a)`
   padding: 1rem 1.5rem;
   background: ${(p) => p.theme.accent};
   color: ${(p) => p.theme.bg};
+  border: 1px solid ${(p) => p.theme.fg};
   font-family: var(--font-mono);
   font-size: 0.82rem;
   letter-spacing: 0.08em;
@@ -128,7 +129,7 @@ const Primary = styled(motion.a)`
     content: "";
     position: absolute;
     inset: 0;
-    background: ${(p) => p.theme.fg};
+    background: ${(p) => p.theme.bg};
     transform: translateY(101%);
     transition: transform 0.35s cubic-bezier(0.7, 0, 0.2, 1);
     z-index: 0;
@@ -148,7 +149,7 @@ const Primary = styled(motion.a)`
   }
 
   &:hover span {
-    color: ${(p) => p.theme.bg};
+    color: ${(p) => p.theme.fg};
   }
 `;
 
